@@ -32,6 +32,8 @@ int main(int argc, char *argv[]) {
     // if it doesn't, it then calls to libjb as it must be kppless
     if (getuid() != 0) {
         fixup();
+        setuid(0);
+        setgid(0);
     }
     
     if (argc < 2 || argv[1][0] != '/') {
