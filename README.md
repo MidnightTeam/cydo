@@ -1,7 +1,9 @@
-## Cydo
+## Cydo [Depreciated]
 
-This is the custom cydo bundled with the Meridian Jailbreak.
+This *was* the custom cydo bundled with the (internal betas of the) Meridian Jailbreak.
 
-It calls to libjailbreak to get setuid entitlements (uid 0).
+It is no longer needed as SUID is possible to achieve without any calls to Jailbreakd.
 
-Feel free to use this for whatever, if needs be. Don't credit me, I don't care. 
+This will be left to serve as an example on *how* to call to Jailbreak, using libjailbreak.
+
+Note: Please don't use the 'setuid' calls, they will be depreciated soon. You can simply set sticky bit (chmod +s <target>) and call setuid(0) to achieve uid0. Refer to the libjailbreak here [here](https://github.com/MidnightTeam/libjailbreak/blob/master/libjailbreak.h) for full usage.
